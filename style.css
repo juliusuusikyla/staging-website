@@ -1,5 +1,40 @@
 /* styles for my landing page */
 
+@font-face {
+  font-family: "Inter";
+  src: url("Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  max-width: 1000px;
+  margin: 20vh auto;
+  padding: 24px;
+  height: 100vh;
+}
+
+mark {
+  background-color: #eaff5c;
+}
+
+.accent {
+  background-color: #7b2fbe;
+  color: white;
+  font-weight: bold;
+}
+
 .undone {
   background-color: lightgray;
 }

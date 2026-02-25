@@ -1,20 +1,22 @@
 <!doctype html>
 <html>
   <head>
-    <title>My First Website</title>
+    <title>Julius Uusikylä – Data Visualisation, Analytics and Information Design Consultant</title>
     <link rel="stylesheet" href="style.css"></link>
+    <link rel="preload" href="Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>This is my very <mark>very</mark> first website.</p>
+    <h1 id="page-title">Hello!</h1>
+      <script>
+        document.getElementById('page-title').textContent = document.title;
+      </script>
+    <p><mark>Contact</mark> julius at juconsulting.fi / +358 40 508 8176</p>
     <p>
-      <mark>Status:</mark> Publish this on github pages. Use github pages as a
-      staging for my actual site.
+      <mark class="accent">What is this:</mark> A github pages site that acts as a
+      staging page for upcoming landing page.
     </p>
     <p>
-      <mark class="undone">coming up:</mark> this will be the hero section of my
-      freelance website.
+      <mark class="undone">Coming up:</mark> mini version: standalone hero section, minimal freelance website.
     </p>
-    <cite>Julius</cite>
   </body>
 </html>
