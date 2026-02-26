@@ -6,17 +6,55 @@
     <link rel="preload" href="Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
   </head>
   <body>
-    <h1 id="page-title">Hello!</h1>
-      <script>
-        document.getElementById('page-title').textContent = document.title;
-      </script>
-    <p><mark>Contact</mark> julius at juconsulting.fi / +358 40 508 8176</p>
-    <p>
-      <mark class="accent">What is this:</mark> A github pages site that acts as a
-      staging page for upcoming landing page.
-    </p>
-    <p>
-      <mark class="undone">Coming up:</mark> mini version: standalone hero section, minimal freelance website.
-    </p>
+    <div id="particles-js"></div>
+
+    <div class="content-card">
+      <h1 id="page-title">Hello!</h1>
+        <script>
+          document.getElementById('page-title').textContent = document.title;
+        </script>
+      <p><mark>Contact</mark> julius at juconsulting.fi / +358 40 508 8176</p>
+      <p>
+        <mark class="accent">What is this:</mark> A github pages site that acts as a
+        staging page for upcoming landing page.
+      </p>
+      <p>
+        <mark class="undone">Coming up:</mark> mini version: standalone hero section, minimal freelance website.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 160, density: { enable: true, value_area: 800 } },
+          color: { value: ['#eaff5c', '#eaff5c', '#eaff5c', '#7b2fbe'] },
+          shape: { type: 'circle', stroke: { width: 1, color: '#7b2fbe' } },
+          opacity: { value: 0.7, random: true },
+          size: { value: 18, random: true },
+          line_linked: { enable: false },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'repulse' },
+            resize: true
+          },
+          modes: {
+            repulse: { distance: 60, duration: 0.4 }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
   </body>
 </html>

@@ -18,11 +18,36 @@
 
 body {
   font-family: "Inter", sans-serif;
-  text-align: center;
-  max-width: 1000px;
-  margin: 20vh auto;
-  padding: 24px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: whitesmoke;
+}
+
+.content-card {
+  position: relative;
+  z-index: 1;
+  background: white;
+  max-width: 700px;
+  width: 90%;
+  padding: 48px 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 32px rgba(123, 47, 190, 0.08);
 }
 
 mark {
