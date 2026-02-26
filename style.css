@@ -63,3 +63,78 @@ mark {
 .undone {
   background-color: lightgray;
 }
+
+.profile-photo {
+  display: block;
+  margin: 0 auto 24px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.clients-section,
+.contact-section {
+  margin-top: 24px;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0 0 4px;
+}
+
+.clients-list {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.card-link {
+  color: #7b2fbe;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #7b2fbe;
+  transition: width 0.2s ease;
+}
+
+.card-link:hover::after {
+  width: 100%;
+}
+
+.contact-section p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.linkedin-wrapper {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.linkedin-link {
+  display: inline-block;
+  color: #0a66c2;
+  transition: opacity 0.15s ease;
+  vertical-align: top;
+}
+
+.linkedin-link:hover {
+  opacity: 0.75;
+}
+
+.annotation-arrow {
+  overflow: visible;
+  pointer-events: none;
+  vertical-align: top;
+}
