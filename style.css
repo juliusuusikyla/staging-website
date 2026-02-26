@@ -130,7 +130,8 @@ mark {
   }
 
   .content-card {
-    width: 88%;
+    margin: 100px 20px;
+    width: 80%;
     padding: 28px 24px;
     border-radius: 10px;
     font-size: 0.98rem;
@@ -235,4 +236,8 @@ mark {
   overflow: visible;
   pointer-events: none;
   vertical-align: top;
+}
+
+h1#page-title {
+  font-weight: 900;
 }
