@@ -1,8 +1,12 @@
 /* styles for my landing page */
 
+:root {
+  --accent: #7b2fbe;
+}
+
 @font-face {
   font-family: "Inter";
-  src: url("Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("fonts/Inter/InterTight-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +14,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("fonts/InterTight-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -42,12 +46,36 @@ body {
   position: relative;
   z-index: 1;
   background: white;
-  max-width: 700px;
+  max-width: 680px;
   width: 90%;
-  padding: 48px 40px;
+  padding: 32px 36px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 32px rgba(123, 47, 190, 0.08);
+  font-size: 0.88rem;
+}
+
+ul {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.services ul {
+  list-style: none;
+  padding-left: 1.1rem;
+  margin-left: 1.5rem;
+}
+
+.services li {
+  position: relative;
+}
+
+.services li::before {
+  content: "■";
+  position: absolute;
+  left: -1.1rem;
+  font-size: 0.45em;
+  top: 0.38em;
+  color: var(--accent);
 }
 
 mark {
@@ -55,8 +83,7 @@ mark {
 }
 
 .accent {
-  background-color: #7b2fbe;
-  color: white;
+  color: var(--accent);
   font-weight: bold;
 }
 
@@ -73,9 +100,55 @@ mark {
   object-fit: cover;
 }
 
-.clients-section,
-.contact-section {
+.services,
+.career,
+.clients,
+.contact {
   margin-top: 24px;
+}
+
+.mid-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.mid-row section {
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    min-height: 100vh;
+    height: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .content-card {
+    width: 88%;
+    padding: 28px 24px;
+    border-radius: 10px;
+    font-size: 0.98rem;
+  }
+
+  .services ul {
+    margin-left: 1rem;
+  }
+
+  .mid-row {
+    flex-direction: column;
+    gap: 0;
+    padding-left: 1rem;
+  }
+
+  .mid-row section {
+    margin-top: 20px;
+  }
 }
 
 .section-label {
@@ -85,26 +158,51 @@ mark {
   margin: 0 0 4px;
 }
 
+.career-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.career-year {
+  font-weight: 200;
+  color: var(--accent);
+  margin-right: 4px;
+}
+
+.career-place {
+  font-weight: 600;
+}
+
 .clients-list {
   margin: 0;
+  padding-left: 0;
+  list-style: none;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .card-link {
-  color: #7b2fbe;
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
   position: relative;
 }
 
 .card-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 0;
   height: 1.5px;
-  background: #7b2fbe;
+  background: var(--accent);
   transition: width 0.2s ease;
 }
 
@@ -112,7 +210,7 @@ mark {
   width: 100%;
 }
 
-.contact-section p {
+.contact p {
   margin: 0 0 12px;
   font-size: 0.9rem;
 }
